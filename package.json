@@ -1,0 +1,35 @@
+{
+  "name": "dayschedule",
+  "version": "0.0.1",
+  "description": "Dayschedule Node.js package to access appointment bookings API",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev lib/Dayschedule.ts",
+    "test": "npx playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dayschedule/dayschedule.git"
+  },
+  "keywords": [
+    "Appointment",
+    "Scheduling"
+  ],
+  "author": "https://github.com/vickyRathee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dayschedule/dayschedule/issues"
+  },
+  "homepage": "https://github.com/Dayschedule/dayschedule#readme",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.38.1",
+    "@types/node": "^20.8.3",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.2.2"
+  }
+}
