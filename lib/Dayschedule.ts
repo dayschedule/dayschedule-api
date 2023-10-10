@@ -1,24 +1,15 @@
-import axios, { AxiosRequestConfig } from "axios";
-import resource from './Resource';
+import Api from "./api";
+import Resource from "./Resource";
 
-export type Resource = {
-    getResources: () => any,
-    getResourceById: (resource_id: string) => any,
-    createResource: (data: any) => any,
-    updateResource: (resource_id: string, data: any) => any;
-    deleteResource: (resource_id: string) => any;
+class DaySchedule {
+  private api: Api;
+
+  public resources: Resource;
+
+  constructor(apiKey: string) {
+    this.api = new Api(apiKey);
+    this.resources = new Resource(this.api);
+  }
 }
 
-class Dayschedule {
-    private apiKey: string;
-    public apiUrl: string = "https://api.dayschedule.in/v1";
-
-    public resource: Resource;
-
-    constructor(apiKey: string) {
-        this.apiKey = apiKey;
-        this.resource = resource(apiKey, this.apiUrl);
-    }
-}
-
-export default Dayschedule;
+export default DaySchedule;

@@ -1,63 +1,31 @@
-import axios from "axios";
+import Api from "./api";
 
-function resource(api_key: string, api_url: string) {
-    return {
-        async getResources(): Promise<any[]> {
-            return await axios.get(
-                `${api_url}/resources`,
-                {
-                    params: {
-                        "apiKey": api_key,
-                    }
-                }
-            );
-        },
+class Resource {
+  private api: Api;
 
-        async getResourceById(resource_id: string): Promise<any> {
-            return await axios.get(
-                `${api_url}/resources/${resource_id}`,
-                {
-                    params: {
-                        "apiKey": api_key,
-                    }
-                }
-            );
-        },
+  constructor(api: Api) {
+    this.api = api;
+  }
 
-        async createResource(data: any): Promise<any> {
-            return await axios.post(
-                `${api_url}/resources`,
-                data,
-                {
-                    params: {
-                        "apiKey": api_key,
-                    }
-                }
-            )
-        },
+  async list(): Promise<any[]> {
+    return this.api.get(`/resources`);
+  }
 
-        async updateResource(resource_id: string, data: any): Promise<any> {
-            return await axios.put(
-                `${api_url}/resources/${resource_id}`,
-                data,
-                {
-                    params: {
-                        "apiKey": api_key,
-                    }
-                }
-            )
-        },
+  async get(id: string): Promise<any> {
+    return this.api.get(`/resources/${id}`);
+  }
 
-        async deleteResource(resource_id: string): Promise<any> {
-            return await axios.delete(`${api_url}/resources/${resource_id}`,
-                {
-                    params: {
-                        "apiKey": api_key,
-                    }
-                }
-            )
-        }
-    }
+  async create(data: any): Promise<any> {
+    return this.api.post(`/resources`, data);
+  }
+
+  async update(id: string, data: any): Promise<any> {
+    return this.api.put(`/resources/${id}`, data);
+  }
+
+  async delete(id: string, data: any): Promise<any> {
+    return this.api.delete(`/resources/${id}`);
+  }
 }
 
-export default resource;
+export default Resource;

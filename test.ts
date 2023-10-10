@@ -1,11 +1,7 @@
-import DaySchedule from "./lib/Dayschedule";
-// import Resource from "./lib/Resource";
+import DaySchedule from "./lib/DaySchedule";
 
-const dayschedule: DaySchedule = new DaySchedule(`${process.env.API_KEY}`)
+const daySchedule = new DaySchedule(`${process.env.API_KEY}`);
 
-// console.log(dayschedule.resource.createResource)
-// const res = new Resource(dayschedule);
-
-// res.getResources()
-
-
+daySchedule.resources.list().then((d) => {
+  console.log("data", d);
+});
