@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev lib/Dayschedule.ts",
-    "test": "npx playwright test"
+    "test": "npx playwright test",
+    "dev-test": "ts-node-dev test.ts"
   },
   "repository": {
     "type": "git",

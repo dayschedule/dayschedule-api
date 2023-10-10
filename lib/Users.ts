@@ -1,6 +1,6 @@
 import Api from "./api";
 
-class Resource {
+class User {
     private api: Api;
 
     constructor(api: Api) {
@@ -8,24 +8,24 @@ class Resource {
     }
 
     async list(): Promise<any[]> {
-        return this.api.get(`/resources`);
+        return this.api.get(`/users`);
     }
 
     async get(id: string): Promise<any> {
-        return this.api.get(`/resources/${id}`);
+        return this.api.get(`/users/${id}`);
     }
 
     async create(data: any): Promise<any> {
-        return this.api.post(`/resources`, data);
+        return this.api.post(`/users`, data);
     }
 
     async update(id: string, data: any): Promise<any> {
-        return this.api.put(`/resources/${id}`, data);
+        return this.api.put(`/users/${id}`, data);
     }
 
     async delete(id: string): Promise<any> {
-        return this.api.delete(`/resources/${id}`);
+        return this.api.delete(`/users/${id}`);
     }
 }
 
-export default Resource;
+export default User;
