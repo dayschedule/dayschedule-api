@@ -1,5 +1,5 @@
 {
-  "name": "dayschedule",
+  "name": "dayschedule-api",
   "version": "0.0.1",
   "description": "Dayschedule Node.js package to access appointment bookings API",
   "main": "index.js",
@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/Dayschedule/dayschedule/issues"
   },
-  "homepage": "https://github.com/Dayschedule/dayschedule#readme",
+  "homepage": "https://dayschedule.com/docs/api",
   "dependencies": {
     "axios": "^1.5.1",
     "dotenv": "^16.3.1"
