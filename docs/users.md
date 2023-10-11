@@ -23,7 +23,7 @@ dayschedule.users.list()
         "is_verified": 1,
         "team_access": 1,
         "page_id": 42322,
-        "booking_url": "your-domain.dayschedule.in",
+        "booking_url": "your-domain.dayschedule.com",
         "status": "active",
         "time_zone": "Asia/Calcutta",
         "location": "Delhi",

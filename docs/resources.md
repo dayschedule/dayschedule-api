@@ -454,7 +454,7 @@ dayschedule.resources.create({
     "is_template": false,
     "rank": 1,
     "org_id": 2347,
-    "booking_url": "https://your-domain.dayschedule.in",
+    "booking_url": "https://your-domain.dayschedule.com",
     "schedule_id": 52337,
     "id": "6524eewed72b40081c7361c11"
 }
@@ -585,7 +585,7 @@ dayschedule.resources.update(resource_id, {
   },
   "attachments": [],
   "is_enabled": true,
-  "booking_url": "https://your-domain.dayschedule.in",
+  "booking_url": "https://your-domain.dayschedule.com",
   "rank": 1,
   "is_template": false,
 })
@@ -729,7 +729,7 @@ dayschedule.resources.update(resource_id, {
     "is_template": false,
     "rank": 1,
     "org_id": 222387,
-    "booking_url": "https://your-domain.dayschedule.in",
+    "booking_url": "https://your-domain.dayschedule.com",
     "schedule_id": 537,
     "id": "6524e2ad72b54221c7361c11"
 }
