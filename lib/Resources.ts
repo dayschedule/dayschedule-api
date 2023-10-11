@@ -1,6 +1,6 @@
 import Api from "./api";
 
-class Resource {
+class Resources {
     private api: Api;
 
     constructor(api: Api) {
@@ -28,4 +28,4 @@ class Resource {
     }
 }
 
-export default Resource;
+export default Resources;

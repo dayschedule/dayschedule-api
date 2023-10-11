@@ -1,6 +1,6 @@
 import Api from "./api";
 
-class User {
+class Users {
     private api: Api;
 
     constructor(api: Api) {
@@ -28,4 +28,4 @@ class User {
     }
 }
 
-export default User;
+export default Users;

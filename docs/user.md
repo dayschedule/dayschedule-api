@@ -2,129 +2,135 @@
 
 ### Get Users List
 ```js
-instance.users.list()
+dayschedule.users.list()
 ```
 
 **Response:**
 ```json
-[{
-    "user_id": 3233,
-    "org_id": 5322,
-    "name": "John Doe",
-    "email": "johndoe@gmail.com",
-    "phone": "+91 xxxxxxxxxx",
-    "role": "Owner",
-    "permissions": null,
-    "is_verified": 1,
-    "team_access": 1,
-    "page_id": 42322,
-    "booking_url": "your-domain.dayschedule.in",
-    "status": "active",
-    "time_zone": "Asia/Calcutta",
-    "location": "Delhi",
-    "team": "Development",
-    "avatar": "https://cdn.dayschedule.com/uploads/org-287/Avatar/758-1695969730791-a49ae2b2-9472-4de7-ad6e-d09157d8eb09.webp",
-    "availability": [
-        {
-            "day": "SUN",
-            "times": [
-                {
-                    "end": "18:00",
-                    "start": "09:00"
-                }
-            ],
-            "is_available": false
-        },
-        {
-            "day": "MON",
-            "times": [
-                {
-                    "end": "18:00",
-                    "start": "10:00"
-                }
-            ],
-            "is_available": true
-        },
-        {
-            "day": "TUE",
-            "times": [
-                {
-                    "end": "18:00",
-                    "start": "09:00"
-                }
-            ],
-            "is_available": true
-        },
-        {
-            "day": "WED",
-            "times": [
-                {
-                    "end": "18:00",
-                    "start": "09:00"
-                }
-            ],
-            "is_available": true
-        },
-        {
-            "day": "THU",
-            "times": [
-                {
-                    "end": "18:00",
-                    "start": "09:00"
-                }
-            ],
-            "is_available": true
-        },
-        {
-            "day": "FRI",
-            "times": [
-                {
-                    "end": "18:00",
-                    "start": "09:00"
-                }
-            ],
-            "is_available": true
-        },
-        {
-            "day": "SAT",
-            "times": [
-                {
-                    "end": "18:00",
-                    "start": "09:00"
-                }
-            ],
-            "is_available": false
-        },
-        {
-            "day": "2023-05-17",
-            "times": [
-                {
-                    "end": "18:00",
-                    "start": "09:00"
-                }
-            ],
-            "is_available": false
-        },
-        {
-            "day": "2023-05-16",
-            "times": [
-                {
-                    "end": "18:00",
-                    "start": "09:00"
-                }
-            ],
-            "is_available": false
-        }
-    ],
-    "last_login_at": "2023-10-10T04:06:32.000Z",
-    "created_at": "2022-12-15T04:15:10.000Z",
-    "updated_at": "2023-10-10T04:06:32.000Z"
-}]
+{
+    "offset": 0,
+    "limit": 20,
+    "total": 40,
+    "returned": 20, 
+    "result": [{
+        "user_id": 3233,
+        "org_id": 5322,
+        "name": "John Doe",
+        "email": "johndoe@gmail.com",
+        "phone": "+91 xxxxxxxxxx",
+        "role": "Owner",
+        "permissions": null,
+        "is_verified": 1,
+        "team_access": 1,
+        "page_id": 42322,
+        "booking_url": "your-domain.dayschedule.in",
+        "status": "active",
+        "time_zone": "Asia/Calcutta",
+        "location": "Delhi",
+        "team": "Development",
+        "avatar": "https://cdn.dayschedule.com/uploads/org-287/Avatar/758-1695969730791-a49ae2b2-9472-4de7-ad6e-d09157d8eb09.webp",
+        "availability": [
+            {
+                "day": "SUN",
+                "times": [
+                    {
+                        "end": "18:00",
+                        "start": "09:00"
+                    }
+                ],
+                "is_available": false
+            },
+            {
+                "day": "MON",
+                "times": [
+                    {
+                        "end": "18:00",
+                        "start": "10:00"
+                    }
+                ],
+                "is_available": true
+            },
+            {
+                "day": "TUE",
+                "times": [
+                    {
+                        "end": "18:00",
+                        "start": "09:00"
+                    }
+                ],
+                "is_available": true
+            },
+            {
+                "day": "WED",
+                "times": [
+                    {
+                        "end": "18:00",
+                        "start": "09:00"
+                    }
+                ],
+                "is_available": true
+            },
+            {
+                "day": "THU",
+                "times": [
+                    {
+                        "end": "18:00",
+                        "start": "09:00"
+                    }
+                ],
+                "is_available": true
+            },
+            {
+                "day": "FRI",
+                "times": [
+                    {
+                        "end": "18:00",
+                        "start": "09:00"
+                    }
+                ],
+                "is_available": true
+            },
+            {
+                "day": "SAT",
+                "times": [
+                    {
+                        "end": "18:00",
+                        "start": "09:00"
+                    }
+                ],
+                "is_available": false
+            },
+            {
+                "day": "2023-05-17",
+                "times": [
+                    {
+                        "end": "18:00",
+                        "start": "09:00"
+                    }
+                ],
+                "is_available": false
+            },
+            {
+                "day": "2023-05-16",
+                "times": [
+                    {
+                        "end": "18:00",
+                        "start": "09:00"
+                    }
+                ],
+                "is_available": false
+            }
+        ],
+        "last_login_at": "2023-10-10T04:06:32.000Z",
+        "created_at": "2022-12-15T04:15:10.000Z",
+        "updated_at": "2023-10-10T04:06:32.000Z"
+    }]
+}
 ```
 
 ### Get User
 ```js
-instance.users.get(user_id)
+dayschedule.users.get(user_id)
 ```
 
 **Response:**
@@ -156,7 +162,7 @@ instance.users.get(user_id)
 
 ### Create User
 ```js
-instance.users.create({
+dayschedule.users.create({
     "emails":["johndoe@gmail.com"],
     "team_access":true,
     "role":"Admin",
@@ -185,7 +191,7 @@ instance.users.create({
 
 ### Update User
 ```js
-instance.users.update({
+dayschedule.users.update({
     "name":"John Doe",
     "email":"johndoe@gmail.com",
     "phone":"+91 xxxxxxxxxx",
@@ -238,7 +244,7 @@ instance.users.update({
 
 ### Delete User
 ```js
-instance.users.delete(user_id)
+dayschedule.users.delete(user_id)
 ```
 **Response:**
 ```json

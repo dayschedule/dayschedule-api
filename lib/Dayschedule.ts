@@ -1,17 +1,17 @@
 import Api from "./api";
-import Resource from "./Resource";
-import User from "./users";
+import Resources from "./Resources";
+import Users from "./Users";
 
 class DaySchedule {
     private api: Api;
 
-    public resources: Resource;
-    public users: User;
+    public resources: Resources;
+    public users: Users;
 
     constructor(apiKey: string) {
         this.api = new Api(apiKey);
-        this.resources = new Resource(this.api);
-        this.users = new User(this.api);
+        this.resources = new Resources(this.api);
+        this.users = new Users(this.api);
     }
 }
 

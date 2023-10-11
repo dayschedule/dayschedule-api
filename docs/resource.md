@@ -2,55 +2,61 @@
 
 ### Get Resources List
 ```js
-instance.resources.list()
+dayschedule.resources.list()
 ```
 
 **Response:**
 ```json
-[{
-    "color": "#006b75",
-    "payment": {
-        "is_enabled": false,
-        "gateways": [
-            "razorpay"
-        ]
-    },
-    "org_id": 1117,
-    "page_id": 1000,
-    "user_id": 3241,
-    "name": "Test Resource",
-    "slug": "/test-resource",
-    "type": "event",
-    "schedule_id": 39127,
-    "language": "en-US",
-    "description": "Add description for this event",
-    "is_enabled": true,
-    "booking_url": "https://your-domain.dayschedule.com",
-    "rank": 1,
-    "created_at": "2022-12-22T11:02:54.237Z",
-    "updated_at": "2023-09-12T06:42:21.481Z",
-    "durations": [
-        {
-            "type": "minutes",
-            "value": 30
-        }
-    ],
-    "prices": [
-        {
-            "name": "Test 1",
-            "duration": "30m",
-            "amount": 10,
-            "currency": "INR"
-        }
-    ],
-    "is_template": false,
-    "id": "63a4395eago29006345f7b52"
-}]
+{   
+    "offset": 0,
+    "limit": 20,
+    "total": 40,
+    "returned": 20, 
+    "result": [{
+        "color": "#006b75",
+        "payment": {
+            "is_enabled": false,
+            "gateways": [
+                "razorpay"
+            ]
+        },
+        "org_id": 1117,
+        "page_id": 1000,
+        "user_id": 3241,
+        "name": "Test Resource",
+        "slug": "/test-resource",
+        "type": "event",
+        "schedule_id": 39127,
+        "language": "en-US",
+        "description": "Add description for this event",
+        "is_enabled": true,
+        "booking_url": "https://your-domain.dayschedule.com",
+        "rank": 1,
+        "created_at": "2022-12-22T11:02:54.237Z",
+        "updated_at": "2023-09-12T06:42:21.481Z",
+        "durations": [
+            {
+                "type": "minutes",
+                "value": 30
+            }
+        ],
+        "prices": [
+            {
+                "name": "Test 1",
+                "duration": "30m",
+                "amount": 10,
+                "currency": "INR"
+            }
+        ],
+        "is_template": false,
+        "id": "63a4395eago29006345f7b52"
+    }]
+}
 ```
 
 ### Get Resource
 ```js
-instance.resources.get(resource_id)
+dayschedule.resources.get(resource_id)
 ```
 **Response:**
 ```json
@@ -199,7 +205,7 @@ instance.resources.get(resource_id)
 
 ### Create Resource
 ```js
-instance.resources.create({
+dayschedule.resources.create({
     "language":"en-US",
     "locations":[{
         "name":"Google Meet",
@@ -456,7 +462,7 @@ instance.resources.create({
 
 ### Update Resource
 ```js
-instance.resources.update(resource_id, {
+dayschedule.resources.update(resource_id, {
   "event_type": "one_on_one",
   "notice": {
     "type": "minutes",
@@ -731,7 +737,7 @@ instance.resources.update(resource_id, {
 
 ### Delete  Resource
 ```js
-instance.resources.delete(resource_id)
+dayschedule.resources.delete(resource_id)
 ```
 **Response:**
 ```json
