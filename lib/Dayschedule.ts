@@ -1,8 +1,10 @@
+import Activities from "./Activities";
 import Api from "./api";
-import Bookings from "./bookings";
-import Pages from "./pages";
+import Bookings from "./Bookings";
+import Contacts from "./Contacts";
+import Pages from "./Pages";
 import Resources from "./Resources";
-import Schedules from "./schedules";
+import Schedules from "./Schedules";
 import Users from "./Users";
 import Workflows from "./Workflows";
 
@@ -15,6 +17,8 @@ class DaySchedule {
     public pages: Pages;
     public schedules: Schedules;
     public workflows: Workflows;
+    public contacts: Contacts;
+    public activities: Activities;
 
     constructor(apiKey: string) {
         this.api = new Api(apiKey);
@@ -24,6 +28,8 @@ class DaySchedule {
         this.pages = new Pages(this.api);
         this.schedules = new Schedules(this.api);
         this.workflows = new Workflows(this.api);
+        this.contacts = new Contacts(this.api);
+        this.activities  = new Activities(this.api);
     }
 }
 

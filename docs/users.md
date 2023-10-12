@@ -191,7 +191,7 @@ dayschedule.users.create({
 
 ### Update User
 ```js
-dayschedule.users.update({
+dayschedule.users.update(user_id, {
     "name":"John Doe",
     "email":"johndoe@gmail.com",
     "phone":"+91 xxxxxxxxxx",
