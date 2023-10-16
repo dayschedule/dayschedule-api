@@ -7,8 +7,8 @@ class Contacts {
         this.api = api;
     }
 
-    async list(): Promise<any[]> {
-        return this.api.get(`/contacts`);
+    async list(params: any): Promise<any[]> {
+        return this.api.get(`/contacts`, params);
     }
 
     async get(id: string): Promise<any> {

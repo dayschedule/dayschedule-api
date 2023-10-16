@@ -2,6 +2,7 @@ import Activities from "./Activities";
 import Api from "./api";
 import Bookings from "./Bookings";
 import Contacts from "./Contacts";
+import Invitees from "./Invitees";
 import Pages from "./Pages";
 import Resources from "./Resources";
 import Schedules from "./Schedules";
@@ -19,6 +20,7 @@ class DaySchedule {
     public workflows: Workflows;
     public contacts: Contacts;
     public activities: Activities;
+    public invitees: Invitees;
 
     constructor(apiKey: string) {
         this.api = new Api(apiKey);
@@ -30,6 +32,7 @@ class DaySchedule {
         this.workflows = new Workflows(this.api);
         this.contacts = new Contacts(this.api);
         this.activities  = new Activities(this.api);
+        this.invitees = new Invitees(this.api);
     }
 }
 

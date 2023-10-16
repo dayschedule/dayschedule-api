@@ -98,7 +98,7 @@ dayschedule.bookings.list({
 
 ### Get Booking
 ```js
-dayschedule.bookings.get(user_id)
+dayschedule.bookings.get(booking_id)
 ```
 
 **Response:**
