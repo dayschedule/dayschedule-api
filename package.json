@@ -24,10 +24,13 @@
     "url": "git+https://github.com/dayschedule/dayschedule-api.git"
   },
   "keywords": [
-    "Appointment",
-    "Scheduling",
-    "Bookings",
-    "Appointment API"
+    "appointments",
+    "appointment",
+    "booking",
+    "scheduling",
+    "calendar",
+    "dayschedule",
+    "reservation"
   ],
   "author": "https://github.com/vickyRathee",
   "license": "MIT",
