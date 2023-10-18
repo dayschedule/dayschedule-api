@@ -1,13 +1,13 @@
-import Activities from "./Activities";
-import Api from "./api";
-import Bookings from "./Bookings";
-import Contacts from "./Contacts";
-import Invitees from "./Invitees";
-import Pages from "./Pages";
-import Resources from "./Resources";
-import Schedules from "./Schedules";
-import Users from "./Users";
-import Workflows from "./Workflows";
+import Activities from "./lib/Activities";
+import Api from "./lib/api";
+import Bookings from "./lib/Bookings";
+import Contacts from "./lib/Contacts";
+import Invitees from "./lib/Invitees";
+import Pages from "./lib/Pages";
+import Resources from "./lib/Resources";
+import Schedules from "./lib/Schedules";
+import Users from "./lib/Users";
+import Workflows from "./lib/Workflows";
 
 class DaySchedule {
   private api: Api;

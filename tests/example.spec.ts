@@ -3,7 +3,7 @@
 // import Dayschedule from '../lib/Dayschedule';
 // import Resource from '../lib/Resource';
 
-// const dayschedule: Dayschedule = new Dayschedule(`94WE91wULMaX3IPHOqPhBuo3FOxofeYd`);
+// const dayschedule: Dayschedule = new Dayschedule(``);
 
 // const resource: Resource = new Resource(dayschedule);
 
