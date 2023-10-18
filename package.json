@@ -8,7 +8,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rimraf ./dist && microbundle --tsconfig tsconfig.json --no-sourcemap",
-    "dev": "ts-node-dev lib/Dayschedule.ts",
+    "dev": "ts-node-dev index.ts",
     "test": "npx playwright test",
     "dev-test": "ts-node-dev test.ts"
   },
@@ -21,7 +21,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dayschedule/dayschedule-api.git"
+    "url": "git+https://github.com/dayschedule/dayschedule-api.git"
   },
   "keywords": [
     "Appointment",
@@ -32,7 +32,7 @@
   "author": "https://github.com/vickyRathee",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Dayschedule/dayschedule-api/issues"
+    "url": "https://github.com/dayschedule/dayschedule-api/issues"
   },
   "homepage": "https://dayschedule.com/docs/api",
   "dependencies": {
