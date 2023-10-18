@@ -1,6 +1,6 @@
 {
   "name": "dayschedule-api",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Dayschedule Node.js package for appointment bookings API",
   "main": "dist/index.js",
   "module": "dist/index.m.js",
