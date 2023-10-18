@@ -1,7 +1,7 @@
 {
   "name": "dayschedule-api",
   "version": "0.0.1",
-  "description": "Dayschedule Node.js package to access appointment bookings API",
+  "description": "Dayschedule Node.js package for appointment bookings API",
   "main": "dist/index.js",
   "module": "dist/index.m.js",
   "unpkg": "dist/index.umd.js",
@@ -25,7 +25,9 @@
   },
   "keywords": [
     "Appointment",
-    "Scheduling"
+    "Scheduling",
+    "Bookings",
+    "Appointment API"
   ],
   "author": "https://github.com/vickyRathee",
   "license": "MIT",
