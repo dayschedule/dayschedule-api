@@ -13,7 +13,7 @@ npm i dayschedule-api
 
 ## Documentation
 
-Full API documentation to understand the appointement booking flow with DaySchedule is available at -
+Full API documentation to understand the appointment booking flow with DaySchedule is available at -
 https://dayschedule.com/docs/api
 
 ### Getting started
@@ -27,7 +27,7 @@ const daySchedule = new DaySchedule('YOUR_API_KEY');
 
 ```
 
-Now, the API can be accessed via the `daySchedule` instance. All the methods follows the namespaced signature. For example, to fetch all the booked appointments -
+Now, the API can be accessed via the `daySchedule` instance. All the methods follow the namespaced signature. For example, to fetch all the booked appointments -
 
 ```
 // API signature
@@ -68,5 +68,5 @@ Each API endpoint has these 5 methods `list`, `get`, `create`, `update`, `delete
 4.  Create a release on GitHub with changelog
 5.  Publish to npm with `npm publish` command
 
-## Licence
+## License
 MIT Licensed. See [LICENSE.txt](LICENSE.txt) for more details
