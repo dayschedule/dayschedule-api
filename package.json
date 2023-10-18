@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dayschedule/dayschedule.git"
+    "url": "git+https://github.com/Dayschedule/dayschedule-api.git"
   },
   "keywords": [
     "Appointment",
@@ -19,7 +19,7 @@
   "author": "https://github.com/vickyRathee",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Dayschedule/dayschedule/issues"
+    "url": "https://github.com/Dayschedule/dayschedule-api/issues"
   },
   "homepage": "https://dayschedule.com/docs/api",
   "dependencies": {

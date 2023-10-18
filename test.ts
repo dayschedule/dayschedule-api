@@ -22,6 +22,12 @@ const daySchedule = new DaySchedule(`${process.env.API_KEY}`);
 //     console.log("Update ", d);
 // });
 
-// daySchedule.users.list().then((d) => {
+// daySchedule.workflows.list().then((d) => {
 //     console.log(d);
 // })
+
+// daySchedule.activities.list('63e9db8d12783e54eba25685', 
+//     {limit: 10, offset: 0})
+//     .then((d) => console.log(d))
+
+
