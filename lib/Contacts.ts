@@ -1,31 +1,31 @@
 import Api from "./api";
 
 class Contacts {
-    private api: Api;
+  private api: Api;
 
-    constructor(api: Api) {
-        this.api = api;
-    }
+  constructor(api: Api) {
+    this.api = api;
+  }
 
-    async list(params: any): Promise<any[]> {
-        return this.api.get(`/contacts`, params);
-    }
+  async list(params: any): Promise<any[]> {
+    return this.api.get(`/contacts`, params);
+  }
 
-    async get(id: string): Promise<any> {
-        return this.api.get(`/contacts/${id}`);
-    }
+  async get(id: string): Promise<any> {
+    return this.api.get(`/contacts/${id}`);
+  }
 
-    async create(data: any): Promise<any> {
-        return this.api.post(`/contacts`, data);
-    }
+  async create(data: any): Promise<any> {
+    return this.api.post(`/contacts`, data);
+  }
 
-    async update(id: string, data: any): Promise<any> {
-        return this.api.put(`/contacts/${id}`, data);
-    }
+  async update(id: string, data: any): Promise<any> {
+    return this.api.put(`/contacts/${id}`, data);
+  }
 
-    async delete(id: string): Promise<any> {
-        return this.api.delete(`/contacts/${id}`);
-    }
+  async delete(id: string): Promise<any> {
+    return this.api.delete(`/contacts/${id}`);
+  }
 }
 
 export default Contacts;

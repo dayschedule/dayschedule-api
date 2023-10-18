@@ -1,31 +1,31 @@
 import Api from "./api";
 
 class Invitees {
-    private api: Api;
+  private api: Api;
 
-    constructor(api: Api) {
-        this.api = api;
-    }
+  constructor(api: Api) {
+    this.api = api;
+  }
 
-    async list(params: any): Promise<any[]> {
-        return this.api.get(`/invitees`, params);
-    }
+  async list(params: any): Promise<any[]> {
+    return this.api.get(`/invitees`, params);
+  }
 
-    async get(id: string): Promise<any> {
-        return this.api.get(`/invitees/${id}`);
-    }
+  async get(id: string): Promise<any> {
+    return this.api.get(`/invitees/${id}`);
+  }
 
-    async create(data: any): Promise<any> {
-        return this.api.post(`/invitees`, data);
-    }
+  async create(data: any): Promise<any> {
+    return this.api.post(`/invitees`, data);
+  }
 
-    async update(id: string, data: any): Promise<any> {
-        return this.api.put(`/invitees/${id}`, data);
-    }
+  async update(id: string, data: any): Promise<any> {
+    return this.api.put(`/invitees/${id}`, data);
+  }
 
-    async delete(id: string): Promise<any> {
-        return this.api.delete(`/invitees/${id}`);
-    }
+  async delete(id: string): Promise<any> {
+    return this.api.delete(`/invitees/${id}`);
+  }
 }
 
 export default Invitees;
