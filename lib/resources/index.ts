@@ -1,6 +1,6 @@
-import Api from "./api";
+import Api from "../api";
 
-class Workflows {
+class Resources {
   private api: Api;
 
   constructor(api: Api) {
@@ -8,24 +8,24 @@ class Workflows {
   }
 
   async list(): Promise<any[]> {
-    return this.api.get(`/workflows`);
+    return this.api.get(`/resources`);
   }
 
   async get(id: string): Promise<any> {
-    return this.api.get(`/workflows/${id}`);
+    return this.api.get(`/resources/${id}`);
   }
 
   async create(data: any): Promise<any> {
-    return this.api.post(`/workflows`, data);
+    return this.api.post(`/resources`, data);
   }
 
   async update(id: string, data: any): Promise<any> {
-    return this.api.put(`/workflows/${id}`, data);
+    return this.api.put(`/resources/${id}`, data);
   }
 
   async delete(id: string): Promise<any> {
-    return this.api.delete(`/workflows/${id}`);
+    return this.api.delete(`/resources/${id}`);
   }
 }
 
-export default Workflows;
+export default Resources;

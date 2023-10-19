@@ -1,6 +1,6 @@
-import Api from "./api";
+import Api from "../api";
 
-class Pages {
+class Users {
   private api: Api;
 
   constructor(api: Api) {
@@ -8,24 +8,24 @@ class Pages {
   }
 
   async list(): Promise<any[]> {
-    return this.api.get(`/pages`);
+    return this.api.get(`/users`);
   }
 
   async get(id: string): Promise<any> {
-    return this.api.get(`/pages/${id}`);
+    return this.api.get(`/users/${id}`);
   }
 
   async create(data: any): Promise<any> {
-    return this.api.post(`/pages`, data);
+    return this.api.post(`/users`, data);
   }
 
   async update(id: string, data: any): Promise<any> {
-    return this.api.put(`/pages/${id}`, data);
+    return this.api.put(`/users/${id}`, data);
   }
 
   async delete(id: string): Promise<any> {
-    return this.api.delete(`/pages/${id}`);
+    return this.api.delete(`/users/${id}`);
   }
 }
 
-export default Pages;
+export default Users;

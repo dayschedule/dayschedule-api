@@ -30,4 +30,7 @@ const daySchedule = new DaySchedule(`${process.env.API_KEY}`);
 //     {limit: 10, offset: 0})
 //     .then((d) => console.log(d))
 
-
+    // daySchedule.activities.create({
+    //     contact_id: '',
+    //     type: 'task'
+    // })

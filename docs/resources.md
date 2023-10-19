@@ -203,7 +203,7 @@ dayschedule.resources.get(resource_id)
 }
 ```
 
-### Create Resource
+### Create an Event
 ```js
 dayschedule.resources.create({
     "language":"en-US",
@@ -457,6 +457,661 @@ dayschedule.resources.create({
     "booking_url": "https://your-domain.dayschedule.com",
     "schedule_id": 52337,
     "id": "6524eewed72b40081c7361c11"
+}
+```
+
+### Create a Webinar
+```js
+dayschedule.resources.create({
+  "language": "en-US",
+  "locations": [
+    {
+      "name": "Google Meet",
+      "type": "google_meet",
+      "remarks": "Web conference using Google meet"
+    }
+  ],
+  "questions": [
+    {
+      "type": "text",
+      "name": "name",
+      "label": "Name",
+      "value": "",
+      "required": true
+    },
+    {
+      "type": "email",
+      "name": "email",
+      "label": "Email address",
+      "value": "",
+      "required": true
+    },
+    {
+      "type": "tel",
+      "name": "mobile",
+      "label": "Mobile number",
+      "value": "",
+      "required": true
+    }
+  ],
+  "settings": {
+    "confirmation": {
+      "type": "thanks",
+      "link": {},
+      "redirect": {},
+      "message": "Thank you for scheduling an appointment with us, we are looking forward to our meeting soon."
+    },
+    "attendees": [],
+    "guest": {
+      "is_allowed": true,
+      "max_allowed": 10,
+      "is_chargeable": false
+    },
+    "privacy": {
+      "type": "public"
+    },
+    "policy": {
+      "reschedule": {
+        "is_enabled": true,
+        "terms": {
+          "type": "minutes",
+          "value": 0
+        }
+      },
+      "cancellation": {
+        "is_enabled": true,
+        "terms": {
+          "type": "minutes",
+          "value": 0
+        }
+      }
+    },
+    "email_to_invitee": true,
+    "email_to_host": true,
+    "date_format": "MMM, DD YYYY",
+    "time_format": "h:mm a",
+    "is_timezone_locked": true,
+    "hide_timezone": false,
+    "hide_language": false,
+    "skip_form": false
+  },
+  "attachments": [],
+  "is_enabled": true,
+  "period": {
+    "type": "specific",
+    "days": 60,
+    "specific": [
+      {
+        "type": "every",
+        "weekday": "MON",
+        "time": "09:00",
+        "time_zone": "Asia/Calcutta"
+      }
+    ]
+  },
+  "notice": {
+    "type": "minutes",
+    "value": 0
+  },
+  "durations": [
+    {
+      "type": "minutes",
+      "value": 30
+    }
+  ],
+  "capacity": {
+    "is_unlimited": false,
+    "is_public": true,
+    "max": 100,
+    "type": "perslot"
+  },
+  "payment": {
+    "gateways": []
+  },
+  "prices": [],
+  "members": [
+    {
+      "user_id": 758,
+      "name": "John Doe",
+      "email": "john.doe@dayschedule.com",
+      "avatar": "https://cdn.dayschedule.com/uploads/org-287/Avatar/758-1695969730791-a49ae2b2-9472-4de7-ad6e-d09157d8eb09.webp",
+      "phone": "+91 xxxxxxxxxx",
+      "time_zone": "Asia/Calcutta"
+    }
+  ],
+  "banner": {
+    "background": "#d93f0b",
+    "url": "https://cdn.dayschedule.com/icon/bg1.png",
+    "color": "#333333",
+    "overlay": true,
+    "align": "right"
+  },
+  "type": "webinar",
+  "user_id": 17358,
+  "page_id": 23333,
+  "name": "Digital Marketing Tips",
+  "slug": "/digital-marketing-tips",
+  "description": "Learn how to improve business matrices using digital marketing."
+})
+```
+
+**Parameters:**
+
+[For complete reference click here](https://dayschedule.com/docs/api#tag/Resources/operation/ResourceController_createResource)
+
+| Name          | Type        | Description                                 |
+|---------------|-------------|---------------------------------------------|
+| location*     | object      | Specify location whether its conference type, physical or telephonic.                       |
+| question*     | array      | Add questions to collect more information about your customers. (e.g. their phone number, address etc.)             |
+| page_id*         | number      | Id of the page you want to add this resource                           |
+| type*         | string      | Type of resource                           |
+| name*         | string      | Name of the resource                        |
+| period*         | object      | Webinar schedule                         |
+
+
+**Response:**
+```json
+{
+    "language": "en-US",
+    "locations": [
+        {
+            "name": "Google Meet",
+            "type": "google_meet",
+            "remarks": "Web conference using Google meet"
+        }
+    ],
+    "questions": [
+        {
+            "type": "text",
+            "name": "name",
+            "label": "Name",
+            "value": "",
+            "required": true
+        },
+        {
+            "type": "email",
+            "name": "email",
+            "label": "Email address",
+            "value": "",
+            "required": true
+        },
+        {
+            "type": "tel",
+            "name": "mobile",
+            "label": "Mobile number",
+            "value": "",
+            "required": true
+        }
+    ],
+    "settings": {
+        "confirmation": {
+            "type": "thanks",
+            "link": {},
+            "redirect": {},
+            "message": "Thank you for scheduling an appointment with us, we are looking forward to our meeting soon."
+        },
+        "attendees": [],
+        "guest": {
+            "is_allowed": true,
+            "max_allowed": 10,
+            "is_chargeable": false
+        },
+        "privacy": {
+            "type": "public"
+        },
+        "policy": {
+            "reschedule": {
+                "is_enabled": true,
+                "terms": {
+                    "type": "minutes",
+                    "value": 0
+                }
+            },
+            "cancellation": {
+                "is_enabled": true,
+                "terms": {
+                    "type": "minutes",
+                    "value": 0
+                }
+            }
+        },
+        "email_to_invitee": true,
+        "email_to_host": true,
+        "date_format": "MMM, DD YYYY",
+        "time_format": "h:mm a",
+        "is_timezone_locked": true,
+        "hide_timezone": false,
+        "hide_language": false,
+        "skip_form": false,
+        "require_approval": false,
+        "prevent_duplicates": false,
+        "clock_24": false
+    },
+    "attachments": [],
+    "is_enabled": true,
+    "period": {
+        "type": "specific",
+        "days": 60,
+        "specific": [
+            {
+                "type": "every",
+                "weekday": "MON",
+                "time": "09:00",
+                "time_zone": "Asia/Calcutta"
+            }
+        ]
+    },
+    "notice": {
+        "type": "minutes",
+        "value": 0
+    },
+    "durations": [
+        {
+            "type": "minutes",
+            "value": 30
+        }
+    ],
+    "capacity": {
+        "is_unlimited": false,
+        "is_public": true,
+        "max": 100,
+        "type": "perslot"
+    },
+    "payment": {
+        "gateways": []
+    },
+    "prices": [],
+    "members": [
+        {
+            "user_id": 758,
+            "name": "John Doe",
+            "email": "john.doe@dasychedule.com",
+            "avatar": "https://cdn.dayschedule.com/uploads/org-287/Avatar/758-1695969730791-a49ae2b2-9472-4de7-ad6e-d09157d8eb09.webp",
+            "phone": "+91 xxxxxxxxxx",
+            "time_zone": "Asia/Calcutta"
+        }
+    ],
+    "banner": {
+        "background": "#d93f0b",
+        "url": "https://cdn.dayschedule.com/icon/bg1.png",
+        "color": "#333333",
+        "overlay": true,
+        "align": "right"
+    },
+    "type": "webinar",
+    "user_id": 758,
+    "page_id": 333,
+    "name": "Digital Marketing Tips",
+    "slug": "/digital-marketing-tips",
+    "description": "Learn how to improve business matrices using digital marketing.",
+    "is_template": false,
+    "rank": 1,
+    "org_id": 287,
+    "booking_url": "https://your-domain.dayschedule.com",
+    "id": "6530c39ea8850ce1f3cf452c"
+}
+```
+
+
+### Create a Service
+```js
+dayschedule.resources.create({
+  "categories": [
+    {
+      "name": "Technical Consultation",
+      "description": "Book For technical consultation"
+    }
+  ],
+  "services": [
+    {
+      "category": "Technical Consultation",
+      "name": "Level 0 Consultation",
+      "description": "Basic overview of dayschedule",
+      "durations": [
+        {
+          "type": "minutes",
+          "value": 15
+        }
+      ],
+      "members": [
+         {
+            "user_id": 7158,
+            "name": "John Doe",
+            "email": "john.doe@dayschedule.com",
+            "avatar": "https://cdn.dayschedule.com/uploads/org-287/Avatar/758-1692781354795-shubh.webp",
+            "phone": "+91 xxxxxxxxxx",
+            "time_zone": "Asia/Calcutta"
+          }
+      ],
+      "prices": [],
+      "break": {}
+    },
+    {
+      "category": "Technical Consultation",
+      "name": "Level 1 Consultaion",
+      "description": "Complete consultation to integrate dayschedule with third party tools ",
+      "durations": [
+        {
+          "type": "minutes",
+          "value": 30
+        }
+      ],
+      "members": [
+         {
+            "user_id": 7158,
+            "name": "Vraj",
+            "email": "vraj@dayschedule.com",
+            "avatar": "https://cdn.dayschedule.com/uploads/org-287/Avatar/758-1692781354795-shubh.webp",
+            "phone": "+91 xxxxxxxxxx",
+            "time_zone": "Asia/Calcutta"
+          }
+      ],
+      "prices": [],
+      "break": {}
+    }
+  ],
+  "period": {
+    "type": "calendar_days",
+    "days": 60,
+    "specific": []
+  },
+  "slots": {
+    "value": 30,
+    "type": "minutes"
+  },
+  "notice": {
+    "type": "minutes",
+    "value": 0
+  },
+  "payment": {
+    "gateways": []
+  },
+  "org_id": 287,
+  "page_id": 333,
+  "user_id": 758,
+  "name": "Dayschedule Consultation",
+  "slug": "/dayschedule-consultation",
+  "type": "service",
+  "schedule_id": 537,
+  "language": "en-US",
+  "description": "<p>Book this service for dayschedule consultation</p>\n",
+  "locations": [
+    {
+      "type": "physical",
+      "address": "48, 1st Floor, Omaxe Galleria, Sector 14, Bahadurgarh, Haryana 124507, India",
+      "city": "Jhajjar",
+      "state": "Haryana",
+      "country": "India",
+      "zip_code": "124507",
+      "latitude": 28.67820069999999,
+      "longitude": 76.89873589999999,
+      "place_id": "ChIJGcetFekNDTkRawL8h8pvl3c",
+      "email": "",
+      "name": "Agenty Analytics Pvt. Ltd."
+    }
+  ],
+  "questions": [
+    {
+      "type": "text",
+      "name": "name",
+      "label": "Name",
+      "value": "",
+      "required": true
+    },
+    {
+      "type": "email",
+      "name": "email",
+      "label": "Email address",
+      "value": "",
+      "required": true
+    },
+    {
+      "type": "tel",
+      "name": "mobile",
+      "label": "Mobile number",
+      "value": "",
+      "required": true
+    }
+  ],
+  "settings": {
+    "confirmation": {
+      "type": "thanks",
+      "link": {},
+      "redirect": {},
+      "message": "Thank you for scheduling an appointment with us, we are looking forward to our meeting soon."
+    },
+    "attendees": [],
+    "guest": {
+      "is_allowed": false,
+      "max_allowed": 10,
+      "is_chargeable": false
+    },
+    "privacy": {
+      "type": "public"
+    },
+    "policy": {
+      "reschedule": {
+        "is_enabled": true,
+        "terms": {
+          "type": "minutes",
+          "value": 0
+        }
+      },
+      "cancellation": {
+        "is_enabled": true,
+        "terms": {
+          "type": "minutes",
+          "value": 0
+        }
+      }
+    },
+    "email_to_invitee": true,
+    "email_to_host": true,
+    "date_format": "MMM, DD YYYY",
+    "time_format": "h:mm a",
+    "is_timezone_locked": true,
+    "hide_timezone": false,
+    "hide_language": false,
+    "skip_form": false,
+    "require_approval": false,
+    "prevent_duplicates": false,
+    "clock_24": false
+  },
+  "attachments": [],
+  "is_enabled": true,
+  "created_at": "2023-09-19T05:36:44.356Z",
+  "updated_at": "2023-10-19T05:54:53.663Z",
+})
+```
+
+**Parameters:**
+
+[For complete reference click here](https://dayschedule.com/docs/api#tag/Resources/operation/ResourceController_createResource)
+
+| Name          | Type        | Description                                 |
+|---------------|-------------|---------------------------------------------|
+| location*     | object      | Specify location whether its conference type, physical or telephonic.                       |
+| question*     | array      | Add questions to collect more information about your customers. (e.g. their phone number, address etc.)             |
+| page_id*         | number      | Id of the page you want to add this resource                           |
+| type*         | string      | Type of resource                           |
+| name*         | string      | Name of the resource                        |
+| schedule_id*         | number      | Resource owner schedule id                            |
+| categories*         | object      | Categories form services                            |
+| services*         | array     | add services                      |
+
+
+**Response:**
+```json
+{
+    "categories": [
+        {
+            "name": "Technical Consultation",
+            "description": "Book For technical consultation"
+        }
+    ],
+    "services": [
+        {
+            "category": "Technical Consultation",
+            "name": "Level 0 Consultation",
+            "description": "Basic overview of dayschedule",
+            "durations": [
+                {
+                    "type": "minutes",
+                    "value": 15
+                }
+            ],
+            "members": [
+                {
+                    "user_id": 7158,
+                    "name": "John Doe",
+                    "email": "john.doe@dayschedule.com",
+                    "avatar": "https://cdn.dayschedule.com/uploads/org-287/Avatar/758-1692781354795-shubh.webp",
+                    "phone": "+91 xxxxxxxxxx",
+                    "time_zone": "Asia/Calcutta"
+                }
+            ],
+            "prices": [],
+            "break": {}
+        },
+        {
+            "category": "Technical Consultation",
+            "name": "Level 1 Consultaion",
+            "description": "Complete consultation to integrate dayschedule with third party tools ",
+            "durations": [
+                {
+                    "type": "minutes",
+                    "value": 30
+                }
+            ],
+            "members": [
+                {
+                    "user_id": 2758,
+                    "name": "vraj",
+                    "email": "vraj@dasychedule.com",
+                    "avatar": "https://cdn.dayschedule.com/uploads/org-287/Avatar/758-1692781354795-shubh.webp",
+                    "phone": "+91 xxxxxxxxxx",
+                    "time_zone": "Asia/Calcutta"
+                }
+            ],
+            "prices": [],
+            "break": {}
+        }
+    ],
+    "period": {
+        "type": "calendar_days",
+        "days": 60,
+        "specific": []
+    },
+    "slots": {
+        "value": 30,
+        "type": "minutes"
+    },
+    "notice": {
+        "type": "minutes",
+        "value": 0
+    },
+    "payment": {
+        "gateways": []
+    },
+    "org_id": 28227,
+    "page_id": 3323,
+    "user_id": 17518,
+    "name": "Dayschedule Consultation",
+    "slug": "/dayschedule-consultation",
+    "type": "service",
+    "schedule_id": 537,
+    "language": "en-US",
+    "description": "<p>Book this service for dayschedule consultation</p>\n",
+    "locations": [
+        {
+            "type": "physical",
+            "address": "48, 1st Floor, Omaxe Galleria, Sector 14, Bahadurgarh, Haryana 124507, India",
+            "city": "Jhajjar",
+            "state": "Haryana",
+            "country": "India",
+            "zip_code": "124507",
+            "latitude": 28.67820069999999,
+            "longitude": 76.89873589999999,
+            "place_id": "ChIJGcetFekNDTkRawL8h8pvl3c",
+            "email": "",
+            "name": "Agenty Analytics Pvt. Ltd."
+        }
+    ],
+    "questions": [
+        {
+            "type": "text",
+            "name": "name",
+            "label": "Name",
+            "value": "",
+            "required": true
+        },
+        {
+            "type": "email",
+            "name": "email",
+            "label": "Email address",
+            "value": "",
+            "required": true
+        },
+        {
+            "type": "tel",
+            "name": "mobile",
+            "label": "Mobile number",
+            "value": "",
+            "required": true
+        }
+    ],
+    "settings": {
+        "confirmation": {
+            "type": "thanks",
+            "link": {},
+            "redirect": {},
+            "message": "Thank you for scheduling an appointment with us, we are looking forward to our meeting soon."
+        },
+        "attendees": [],
+        "guest": {
+            "is_allowed": false,
+            "max_allowed": 10,
+            "is_chargeable": false
+        },
+        "privacy": {
+            "type": "public"
+        },
+        "policy": {
+            "reschedule": {
+                "is_enabled": true,
+                "terms": {
+                    "type": "minutes",
+                    "value": 0
+                }
+            },
+            "cancellation": {
+                "is_enabled": true,
+                "terms": {
+                    "type": "minutes",
+                    "value": 0
+                }
+            }
+        },
+        "email_to_invitee": true,
+        "email_to_host": true,
+        "date_format": "MMM, DD YYYY",
+        "time_format": "h:mm a",
+        "is_timezone_locked": true,
+        "hide_timezone": false,
+        "hide_language": false,
+        "skip_form": false,
+        "require_approval": false,
+        "prevent_duplicates": false,
+        "clock_24": false
+    },
+    "attachments": [],
+    "is_enabled": true,
+    "booking_url": "https://jaini.dayschedule.in",
+    "rank": 1,
+    "is_template": false,
+    "created_at": "2023-09-19T05:36:44.356Z",
+    "updated_at": "2023-10-19T05:54:53.663Z",
+    "id": "6509336ccc166f78c8f67623"
 }
 ```
 
