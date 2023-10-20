@@ -8,11 +8,11 @@ class Activities {
         this.api = api;
     }
 
-    async list(contact_id: string, params: any): Promise<any[]> {
+    async list(contact_id: string, params: any): Promise<Activity[]> {
         return this.api.get(`/activities/${contact_id}`, params);
     }
 
-    async get(activity_id: string): Promise<any> {
+    async get(activity_id: string): Promise<Activity> {
         return this.api.get(`/activities/${activity_id}`);
     }
 

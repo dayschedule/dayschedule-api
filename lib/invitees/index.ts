@@ -8,11 +8,11 @@ class Invitees {
     this.api = api;
   }
 
-  async list(params: any): Promise<any[]> {
+  async list(params: any): Promise<Invitee[]> {
     return this.api.get(`/invitees`, params);
   }
 
-  async get(id: string): Promise<any> {
+  async get(id: string): Promise<Invitee> {
     return this.api.get(`/invitees/${id}`);
   }
 
