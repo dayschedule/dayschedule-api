@@ -16,13 +16,13 @@ class Invitees {
     return this.api.get(`/invitees/${id}`);
   }
 
-    async create(data: Invitee): Promise<any> {
-        return this.api.post(`/invitees`, data);
-    }
+  async create(data: Invitee): Promise<any> {
+    return this.api.post(`/invitees`, data);
+  }
 
-    async update(id: string, data: Invitee): Promise<any> {
-        return this.api.put(`/invitees/${id}`, data);
-    }
+  async update(id: string, data: Invitee): Promise<any> {
+    return this.api.put(`/invitees/${id}`, data);
+  }
 
   async delete(id: string): Promise<any> {
     return this.api.delete(`/invitees/${id}`);

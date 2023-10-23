@@ -12,17 +12,17 @@ class Workflows {
     return this.api.get(`/workflows`);
   }
 
-    async get(id: string): Promise<Workflow> {
-        return this.api.get(`/workflows/${id}`);
-    }
+  async get(id: string): Promise<Workflow> {
+    return this.api.get(`/workflows/${id}`);
+  }
 
-    async create(data: Workflow): Promise<any> {
-        return this.api.post(`/workflows`, data);
-    }
+  async create(data: Workflow): Promise<any> {
+    return this.api.post(`/workflows`, data);
+  }
 
-    async update(id: string, data: Workflow): Promise<any> {
-        return this.api.put(`/workflows/${id}`, data);
-    }
+  async update(id: string, data: Workflow): Promise<any> {
+    return this.api.put(`/workflows/${id}`, data);
+  }
 
   async delete(id: string): Promise<any> {
     return this.api.delete(`/workflows/${id}`);
