@@ -1,4 +1,5 @@
-import Api from "./api";
+import Api from "../api";
+import { Resource } from "./types";
 
 class Resources {
   private api: Api;
@@ -7,19 +8,19 @@ class Resources {
     this.api = api;
   }
 
-  async list(): Promise<any[]> {
-    return this.api.get(`/resources`);
+  async list(params: any = undefined): Promise<Resource[]> {
+    return this.api.get(`/resources`, params);
   }
 
-  async get(id: string): Promise<any> {
+  async get(id: string): Promise<Resource> {
     return this.api.get(`/resources/${id}`);
   }
 
-  async create(data: any): Promise<any> {
+  async create(data: Resource): Promise<any> {
     return this.api.post(`/resources`, data);
   }
 
-  async update(id: string, data: any): Promise<any> {
+  async update(id: string, data: Resource): Promise<any> {
     return this.api.put(`/resources/${id}`, data);
   }
 

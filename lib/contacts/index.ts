@@ -1,4 +1,5 @@
-import Api from "./api";
+import Api from "../api";
+import { Contact } from "./types";
 
 class Contacts {
   private api: Api;
@@ -7,19 +8,19 @@ class Contacts {
     this.api = api;
   }
 
-  async list(params: any): Promise<any[]> {
+  async list(params: any): Promise<Contact[]> {
     return this.api.get(`/contacts`, params);
   }
 
-  async get(id: string): Promise<any> {
+  async get(id: string): Promise<Contact> {
     return this.api.get(`/contacts/${id}`);
   }
 
-  async create(data: any): Promise<any> {
+  async create(data: Contact): Promise<any> {
     return this.api.post(`/contacts`, data);
   }
 
-  async update(id: string, data: any): Promise<any> {
+  async update(id: string, data: Contact): Promise<any> {
     return this.api.put(`/contacts/${id}`, data);
   }
 

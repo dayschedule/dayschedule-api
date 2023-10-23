@@ -1,4 +1,5 @@
-import Api from "./api";
+import Api from "../api";
+import { Workflow } from "./types";
 
 class Workflows {
   private api: Api;
@@ -11,15 +12,15 @@ class Workflows {
     return this.api.get(`/workflows`);
   }
 
-  async get(id: string): Promise<any> {
+  async get(id: string): Promise<Workflow> {
     return this.api.get(`/workflows/${id}`);
   }
 
-  async create(data: any): Promise<any> {
+  async create(data: Workflow): Promise<any> {
     return this.api.post(`/workflows`, data);
   }
 
-  async update(id: string, data: any): Promise<any> {
+  async update(id: string, data: Workflow): Promise<any> {
     return this.api.put(`/workflows/${id}`, data);
   }
 
