@@ -1,8 +1,13 @@
-# Resources
+# [Resources](https://dayschedule.com/docs/api#tag/Resources)
 
-### Get Resources List
+## Get Resources
+To fetch all the resources (event, webinar, services etc)
+
 ```js
-dayschedule.resources.list()
+dayschedule.resources.list();
+
+// To fetch a particular user resources
+// dayschedule.resources.list({user_id : xxx});
 ```
 
 **Response:**
@@ -54,7 +59,12 @@ dayschedule.resources.list()
 }
 ```
 
-### Get Resource
+
+
+
+## Get Resource By Id
+To get an event, webinar or service by Id
+
 ```js
 dayschedule.resources.get(resource_id)
 ```
@@ -203,7 +213,17 @@ dayschedule.resources.get(resource_id)
 }
 ```
 
+## Create a Resource
+The are 3 types of resources supported on DaySchedule -
+1. Event
+2. Webinar
+3. Service
+
+You can use the `resources.create` method to create any type of resource. For example, to create an event an 1:1 event to take appointments -
+
 ### Create an Event
+Create an appointment page for 1:1, [round-robin](https://dayschedule.com/products/round-robin-scheduling-software) or group appointments on Google meet, Zoom etc for online appointment booking.
+
 ```js
 dayschedule.resources.create({
     "language":"en-US",
@@ -317,16 +337,17 @@ dayschedule.resources.create({
 ```
 **Parameters:**
 
-[For complete reference click here](https://dayschedule.com/docs/api#tag/Resources/operation/ResourceController_createResource)
 
 | Name          | Type        | Description                                 |
 |---------------|-------------|---------------------------------------------|
-| location*     | object      | Specify location whether its conference type, physical or telephonic.                       |
-| question*     | array      | Add questions to collect more information about your customers. (e.g. their phone number, address etc.)             |
+| location*     | object      | Specify [meeting location](https://dayschedule.com/docs/t/locations/273) whether its conference type(Google meet, Zoom etc), physical or telephonic.                       |
+| question*     | array      | Add [custom questions](https://dayschedule.com/docs/t/how-to-customize-the-appointment-registration-form/383) to collect more information about your customers. (e.g. their phone number, address etc.)             |
 | page_id*         | number      | Id of the page you want to add this resource                           |
 | type*         | string      | Type of resource                           |
 | name*         | string      | Name of the resource                        |
 | schedule_id*         | number      | Resource owner schedule id                            |
+
+
 
 **Response:**
 ```json
@@ -461,6 +482,8 @@ dayschedule.resources.create({
 ```
 
 ### Create a Webinar
+To create a [webinar](https://dayschedule.com/products/webinar-software), event or conference where 100s of users can join the same event online over Zoom, Google meet or an address mentioned in the location.
+
 ```js
 dayschedule.resources.create({
   "language": "en-US",
@@ -597,7 +620,6 @@ dayschedule.resources.create({
 
 **Parameters:**
 
-[For complete reference click here](https://dayschedule.com/docs/api#tag/Resources/operation/ResourceController_createResource)
 
 | Name          | Type        | Description                                 |
 |---------------|-------------|---------------------------------------------|
@@ -752,8 +774,8 @@ dayschedule.resources.create({
 }
 ```
 
-
 ### Create a Service
+To create a service catalog and accept appointment booking on your shop like SPA, Salon, Parlour etc.
 ```js
 dayschedule.resources.create({
   "categories": [
@@ -926,8 +948,6 @@ dayschedule.resources.create({
 
 **Parameters:**
 
-[For complete reference click here](https://dayschedule.com/docs/api#tag/Resources/operation/ResourceController_createResource)
-
 | Name          | Type        | Description                                 |
 |---------------|-------------|---------------------------------------------|
 | location*     | object      | Specify location whether its conference type, physical or telephonic.                       |
@@ -938,6 +958,7 @@ dayschedule.resources.create({
 | schedule_id*         | number      | Resource owner schedule id                            |
 | categories*         | object      | Categories form services                            |
 | services*         | array     | add services                      |
+
 
 
 **Response:**
@@ -1115,7 +1136,7 @@ dayschedule.resources.create({
 }
 ```
 
-### Update Resource
+## Update Resource by ID
 ```js
 dayschedule.resources.update(resource_id, {
   "event_type": "one_on_one",
@@ -1247,7 +1268,6 @@ dayschedule.resources.update(resource_id, {
 ```
 **Parameters:**
 
-[For complete reference click here](https://dayschedule.com/docs/api#tag/Resources/operation/ResourceController_createResource)
 
 | Name          | Type        | Description                                 |
 |---------------|-------------|---------------------------------------------|
@@ -1390,7 +1410,7 @@ dayschedule.resources.update(resource_id, {
 }
 ```
 
-### Delete  Resource
+## Delete Resource
 ```js
 dayschedule.resources.delete(resource_id)
 ```
@@ -1400,3 +1420,6 @@ dayschedule.resources.delete(resource_id)
   "message": "1 resource's deleted successfully"
 }
 ```
+
+[API reference &rarr;](https://dayschedule.com/docs/api#tag/Resources/operation/ResourceController_createResource)
+

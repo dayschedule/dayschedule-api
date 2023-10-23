@@ -8,8 +8,8 @@ class Resources {
     this.api = api;
   }
 
-  async list(): Promise<Resource[]> {
-    return this.api.get(`/resources`);
+  async list(params: any = undefined): Promise<Resource[]> {
+    return this.api.get(`/resources`, params);
   }
 
   async get(id: string): Promise<Resource> {
